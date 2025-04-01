@@ -6,4 +6,6 @@ model User {
   password             String
   description          String?
   profile_photo        String?
+
+  advertisement Advertisement[]
 }

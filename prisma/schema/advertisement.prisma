@@ -1,0 +1,14 @@
+model Advertisement {
+  id             String        @id @default(uuid())
+  name           String
+  gender         String
+  age            String
+  adress        String?
+  description      String?
+  image          String[]         
+  createdAt      DateTime      @default(now())
+
+  
+  userId       String
+  user         User          @relation(fields: [userId], references: [id])
+}
